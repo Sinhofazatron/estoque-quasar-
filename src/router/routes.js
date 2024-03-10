@@ -23,6 +23,16 @@ const routes = [
         name: "email-confirmation",
         component: () => import("pages/EmailConfirmation.vue"),
       },
+      {
+        path: "forgot-password",
+        name: "forgot-password",
+        component: () => import("pages/ForgotPassword.vue"),
+      },
+      {
+        path: "reset-password",
+        name: "reset-password",
+        component: () => import("pages/ResetPassword.vue"),
+      },
     ],
   },
   {
@@ -36,6 +46,7 @@ const routes = [
       },
       // { path: "", component: () => import("pages/IndexPage.vue") },
     ],
+    meta: { requiresAuth: true },
   },
 
   // Always leave this as last one,
@@ -46,4 +57,4 @@ const routes = [
   },
 ];
 
-export default routes
+export default routes;
